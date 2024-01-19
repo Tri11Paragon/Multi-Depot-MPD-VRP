@@ -7,10 +7,14 @@ option(ENABLE_TSAN "Enable the thread data race sanitizer" OFF)
 
 set(CMAKE_CXX_STANDARD 17)
 
+add_subdirectory(libraries/BLT)
+
 include_directories(include/)
 file(GLOB_RECURSE PROJECT_BUILD_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
 add_executable(MDMPD_VRP ${PROJECT_BUILD_FILES})
+
+target_link_libraries(MDMPD_VRP PUBLIC BLT)
 
 target_compile_options(MDMPD_VRP PRIVATE -Wall -Wextra -Werror -Wpedantic -Wno-comment)
 target_link_options(MDMPD_VRP PRIVATE -Wall -Wextra -Werror -Wpedantic -Wno-comment)
