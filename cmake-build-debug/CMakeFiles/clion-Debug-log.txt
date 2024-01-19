@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/brett/jetbrains/clion-install/bin/ninja/linux/x64/ninja -G Ninja -S /home/brett/Documents/code/c++/MDMPD-VRP -B /home/brett/Documents/code/c++/MDMPD-VRP/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/brett/Documents/code/c++/MDMPD-VRP/cmake-build-debug
